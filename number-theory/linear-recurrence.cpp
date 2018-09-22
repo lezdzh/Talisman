@@ -1,3 +1,8 @@
+// O(m^2logn)
+// Given a[0], a[1], ..., a[m - 1]
+// a[n] = c[0] * a[n - m] + ... + c[m - 1] * a[n - 1]
+// Solve for a[n] = v[0] * a[0] + v[1] * a[1] + ... + v[m - 1] * a[m - 1]
+
 void linear_recurrence(long long n, int m, int a[], int c[], int p) {
 	long long v[M] = {1 % p}, u[M << 1], msk = !!n;
 	for(long long i(n); i > 1; i >>= 1) {
