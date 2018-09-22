@@ -1,10 +1,3 @@
-typedef long long ll;
-
-const int maxm = 2e5 + 5;
-const int maxl = 65;
-
-int tot;
-ll a[maxm], b[maxl];
 ll solve()
 {
 	ll res = 0;
@@ -24,4 +17,3 @@ ll solve()
 		res = max(res, res ^ b[i]);
 	return res;
 }
-

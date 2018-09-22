@@ -2,35 +2,34 @@
 void tarjan(int u, int pa)
 {
     d[u] = l[u] = ++timer;
-    for(int i = t[u]; i; i = a[i].next)
+    for(int i = tail[u]; i; i = e[i].next)
     {
-        if(!d[a[i].v])
+        if(!d[e[i].v])
         {
             st[++top] = i;
-            tarjan(a[i].v, u);
-            l[u] = min(l[u], l[a[i].v]);
-            if(l[a[i].v] >= d[u])
+            tarjan(e[i].v, u);
+            l[u] = min(l[u], l[e[i].v]);
+            if(l[e[i].v] >= d[u])
             {
                 bcc++;
                 while(true)
                 {
                     int now = st[top--];
-                    if(vst[a[now].u] != bcc)
+                    if(vst[e[now].u] != bcc)
                     {
-                        vst[a[now].u] = bcc;
-                        G[bcc].push_back(a[now].u);
+                        vst[e[now].u] = bcc;
+                        G[bcc].push_back(e[now].u);
                     }
-                    if(vst[a[now].v] != bcc)
+                    if(vst[e[now].v] != bcc)
                     {
-                        vst[a[now].v] = bcc;
-                        G[bcc].push_back(a[now].v);
+                        vst[e[now].v] = bcc;
+                        G[bcc].push_back(e[now].v);
                     }
-                    if(now == i)
-                        break;
+                    if(now == i) break;
                 }
             }
         }
-        else if(a[i].v != pa)
-            l[u] = min(l[u], d[a[i].v]);
+        else if(e[i].v != pa)
+            l[u] = min(l[u], d[e[i].v]);
     }
 }
