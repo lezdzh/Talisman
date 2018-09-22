@@ -1,81 +1,37 @@
-const double eps = 1e-8;
-// max{c * x | Ax <= b, x >= 0}的解, 无解返回空的vector, 否则就是解.
-vector<double> simplex(vector<vector<double> > &A, vector<double> b, vector<double> c) {
-	int n = A.size(), m = A[0].size() + 1, r = n, s = m - 1;
-	vector<vector<double> > D(n + 2, vector<double>(m + 1));
-	vector<int> ix(n + m);
-	for(int i = 0; i < n + m; i++)  {
-		ix[i] = i;
-	}
-	for(int i = 0; i < n; i++) {
-		for(int j = 0; j < m - 1; j++) {
-			D[i][j] = -A[i][j];
-		}
-		D[i][m - 1] = 1;
-		D[i][m] = b[i];
-		if (D[r][m] > D[i][m]) {
-			r = i;
-		}
-	}
-
-	for(int j = 0; j < m - 1; j++) {
-		D[n][j] = c[j];
-	}
-	D[n + 1][m - 1] = -1;
-	for(double d; ;) {
-		if (r < n) {
-			swap(ix[s], ix[r + m]);
-			D[r][s] = 1. / D[r][s];
-			for(int j = 0; j <= m; j++) {
-				if (j != s) {
-					D[r][j] *= -D[r][s];
-				}
-			}
-			for(int i = 0; i <= n + 1; i++) {
-				if (i != r) {
-					for(int j = 0; j <= m; j++) {
-						if (j != s) {
-							D[i][j] += D[r][j] * D[i][s];
-						}
-					}
-					D[i][s] *= D[r][s];
-				}
-			}
-		}
-		r = -1, s = -1;
-		for(int j = 0; j < m; j++) {
-			if (s < 0 || ix[s] > ix[j]) {
-				if (D[n + 1][j] > eps || D[n + 1][j] > -eps && D[n][j] > eps) {
-					s = j;
-				}
-			}
-		}
-		if (s < 0) {
-			break;
-		}
-		for(int i = 0; i < n; i++) {
-			if (D[i][s] < -eps) {
-				if (r < 0 || (d = D[r][m] / D[r][s] - D[i][m] / D[i][s]) < -eps
-					|| d < eps && ix[r + m] > ix[i + m]) {
-
-					r = i;
-				}
-			}
-		}
-
-		if (r < 0) {
-			return vector<double> ();
-		}
-	}
-	if (D[n + 1][m] < -eps) {
-		return vector<double> ();
-	}
-
-	vector<double> x(m - 1);
-	for(int i = m; i < n + m; i++) {
-		if (ix[i] < m - 1) {
-			x[ix[i]] = D[i - m][m];
-		}
-	}
-	return x;
-}
+// max{c * x | Ax <= b, x >= 0}的解, 无解返回空的vector, 否则就是解. 答案在an中
+template <int MAXN = 100, int MAXM = 100>
+struct simplex {
+	int n, m; double a[MAXM][MAXN], b[MAXM], c[MAXN];
+	bool infeasible, unbounded;
+	double v, an[MAXN + MAXM]; int q[MAXN + MAXM];
+	void pivot (int l, int e) {
+		std::swap (q[e], q[l + n]); 
+		double t = a[l][e]; a[l][e] = 1; b[l] /= t;
+		for (int i = 0; i < n; ++i) a[l][i] /= t;
+		for (int i = 0; i < m; ++i) if (i != l && std::abs (a[i][e]) > EPS) {
+			t = a[i][e]; a[i][e] = 0; b[i] -= t * b[l];	
+			for (int j = 0; j < n; ++j) a[i][j] -= t * a[l][j]; }
+		if (std::abs (c[e]) > EPS) {
+			t = c[e]; c[e] = 0; v += t * b[l];	
+			for (int j = 0; j < n; ++j) c[j] -= t * a[l][j]; } }
+	bool pre () {
+		for (int l, e; ; ) {
+			l = e = -1;
+			for (int i = 0; i < m; ++i) if (b[i] < -EPS && (!~l || rand () & 1)) l = i;
+			if (!~l) return false;
+			for (int i = 0; i < n; ++i) if (a[l][i] < -EPS && (!~e || rand () & 1)) e = i;
+			if (!~e) return infeasible = true;
+			pivot (l, e); } }
+	double solve () {
+		double p; std::fill (q, q + n + m, -1);
+		for (int i = 0; i < n; ++i) q[i] = i;
+		v = 0; infeasible = unbounded = false;
+		if (pre ()) return 0;
+		for (int l, e; ; pivot (l, e)) {
+			l = e = -1; for (int i = 0; i < n; ++i) if (c[i] > EPS) { e = i; break; }
+			if (!~e) break; p = INF; 
+			for (int i = 0; i < m; ++i) if (a[i][e] > EPS && p > b[i] / a[i][e])
+				p = b[i] / a[i][e], l = i;
+			if (!~l) return unbounded = true, 0; }
+		for (int i = n; i < n + m; ++i) if (~q[i]) an[q[i]] = b[i - n];
+		return v; } };
