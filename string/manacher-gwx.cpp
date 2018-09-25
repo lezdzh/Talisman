@@ -15,10 +15,10 @@ void manacher(int n)
 int main()
 {
 	scanf("%d\n%s", &n, a + 1);
-	b[++tot] = '@';
+	b[++tot] = '@'; b[++tot] = '#';
 	for(int i = 1; i < n; i++)
 		b[++tot] = a[i], b[++tot] = '#';
 	b[++tot] = a[n];
-	b[++tot] = '$';
+	b[++tot] = '#'; b[++tot] = '$';
 	manacher(tot);
 }
