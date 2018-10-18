@@ -1,0 +1,263 @@
+\documentclass[titlepage,a4paper,10pt]{article}
+\usepackage{listings, courier, color, xcolor, setspace, fancyhdr, titlesec, dingbat, mdframed, multicol, multirow}
+\usepackage{fontspec, xunicode, xltxtra}
+\usepackage{graphicx, amssymb, amsmath, textcomp, booktabs}
+\usepackage[left=1.5cm, right=0.4cm, top=1.7cm, bottom=0.0cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{tocloft}
+\usepackage{nameref}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{esint}
+\usepackage{xeCJK}
+
+\pagestyle{fancy}
+\setlength{\headsep}{0.1cm}
+\rhead{Page \thepage}
+\lhead{Talisman's template base}
+\setlength{\columnsep}{16pt}
+
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing{\paragraph}{0pt}{0pt}{10pt}
+\titlespacing{\subparagraph}{0pt}{0pt}{10pt}
+
+\definecolor{numbercolor}{rgb}{0.369,0.1,0.218}
+\definecolor{identifiercolor}{rgb}{0,0,0}
+\definecolor{commentcolor}{rgb}{0,0.5,0.1}
+\definecolor{keywordcolor}{rgb}{0.205,0.248,0.495}
+\definecolor{basiccolor}{rgb}{0.485,0.363,0.261}
+\definecolor{emphcolor}{rgb}{0.9,0.2,0}
+
+\lstset{
+	basicstyle=\footnotesize\bfseries\ttfamily\color{basiccolor},
+	breaklines=true,
+	frame=single,
+	rulecolor=\color{identifiercolor},
+	language=c++,
+	tabsize=4,
+	numbers=left,
+	numbersep=5.5pt,
+	numberstyle=\bfseries\ttfamily\color{numbercolor},
+	identifierstyle=\color{identifiercolor},
+	commentstyle=\color{commentcolor},
+	keywordstyle=\color{keywordcolor},
+	stringstyle=\color{emphcolor}
+}
+
+\setlist{nolistsep}
+
+\def \bangle{ \atopwithdelims \langle \rangle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\title{Talisman}
+%\author{lezdzh}
+
+\begin{document}
+	\maketitle
+	%\begin{multicols}{2}
+%	\begin{CJK}{UTF8}{gbsn}
+		\setcounter{tocdepth}{3}
+		\begingroup
+		\let\cleardoublepage\relax
+		\let\clearpage\relax
+		\renewcommand{\contentsname}{目录}
+		\tableofcontents
+		\newpage
+		\begin{spacing}{0.8}
+		\footnotesize
+		\section{代数}
+			\subsection{FFT-gwx}
+				\lstinputlisting{algebra/FFT-gwx.cpp}
+			\subsection{FFT-wrz}
+				\lstinputlisting{algebra/FFT-wrz.cpp}
+			\subsection{高精度-wrz}
+				\lstinputlisting{algebra/high-precision-wrz.cpp}
+			\subsection{线性基-gwx}
+				\lstinputlisting{algebra/linear_basement-gwx.cpp}
+			\subsection{单纯形}
+				\lstinputlisting{algebra/simplex.cpp}
+			\subsection{NTT-gwx}
+				\lstinputlisting{algebra/NTT-gwx.cpp}
+		\section{计算几何}
+			\subsection{二维计算几何-wrz}
+				\lstinputlisting{computational-geometry/2d/2d-wrz.cpp}
+			\subsection{basis}
+				\lstinputlisting{computational-geometry/2d/basis.cpp}
+			\subsection{circle-arc-struct}
+				\lstinputlisting{computational-geometry/2d/circle-arc-struct.cpp}
+			\subsection{circles-intersections}
+				\lstinputlisting{computational-geometry/2d/circles-intersections.cpp}
+			\subsection{cirque-area-merge}
+				\lstinputlisting{computational-geometry/2d/cirque-area-merge.cpp}
+			\subsection{凸包}
+				\lstinputlisting{computational-geometry/2d/convex.cpp}
+			\subsection{point-in-polygon}
+				\lstinputlisting{computational-geometry/2d/point-in-polygon.cpp}
+			\subsection{point-struct}
+				\lstinputlisting{computational-geometry/2d/point-struct.cpp}
+			\subsection{三角形内心，外心，垂心}
+				\lstinputlisting{computational-geometry/2d/triangle.cpp}
+			\subsection{三维计算几何}
+				\lstinputlisting{computational-geometry/3d/basis.cpp}
+			\subsection{三维凸包}
+				\lstinputlisting{computational-geometry/3d/convex.cpp}
+		\section{数据结构}
+			\subsection{KD树}
+				\lstinputlisting{data-structure/kd-tree.cpp}
+			\subsection{KD树-gwx}
+				\lstinputlisting{data-structure/kd-tree-gwx.cpp}
+			\subsection{lct-gwx}
+				\lstinputlisting{data-structure/lct-gwx.cpp}
+			\subsection{LCT-wrz}
+				\lstinputlisting{data-structure/LCT-wrz.cpp}
+			\subsection{左偏树-wrz}
+				\lstinputlisting{data-structure/leftist-tree-wrz.cpp}
+			\subsection{线段树-gwx}
+				\lstinputlisting{data-structure/segment-tree-gwx.cpp}
+			\subsection{splay-gwx}
+				\lstinputlisting{data-structure/splay-gwx.cpp}
+			\subsection{splay-wrz}
+				\lstinputlisting{data-structure/splay-wrz.cpp}
+			\subsection{treap-gwx}
+				\lstinputlisting{data-structure/treap-gwx.cpp}
+			\subsection{zkw线段树}
+				\lstinputlisting{data-structure/zkw-segment-tree.cpp}
+		\section{图论}
+			\subsection{2-SAT}
+				\lstinputlisting{graph-theory/2-SAT.txt}
+			\subsection{边双联通-gwx}
+				\lstinputlisting{graph-theory/biconnected-graph-edge-gwx.cpp}
+			\subsection{带花树}
+				\lstinputlisting{graph-theory/blossom-algorithm.cpp}
+			\subsection{dijkstra-wrz}
+				\lstinputlisting{graph-theory/dijkstra-wrz.cpp}
+			\subsection{支配树-gwx}
+				\lstinputlisting{graph-theory/dominator_tree-gwx.cpp}
+			\subsection{支配树-wrz}
+				\lstinputlisting{graph-theory/dominator-tree-wrz.cpp}
+			\subsection{欧拉回路-wrz}
+				\lstinputlisting{graph-theory/Euler-circuit-wrz.cpp}
+			\subsection{Hopcoft-Karp}
+				\lstinputlisting{graph-theory/Hopcoft-Karp-algorithm.cpp}
+			\subsection{匈牙利算法-wrz}
+				\lstinputlisting{graph-theory/Hungarian-algorithm-wrz.cpp}
+			\subsection{KM-gwx}
+				\lstinputlisting{graph-theory/KM-gwx.cpp}
+			\subsection{KM-truly-n3}
+				\lstinputlisting{graph-theory/KM-truly-n3.cpp}
+			\subsection{k短路a星-gwx}
+				\lstinputlisting{graph-theory/kth-shortest-path-astar-gwx.cpp}
+			\subsection{K短路可并堆}
+				\lstinputlisting{graph-theory/kth-shortest-path-mergeable-heap.cpp}
+			\subsection{最大团}
+				\lstinputlisting{graph-theory/maximum-clique.cpp}
+			\subsection{SAP网络流}
+				\lstinputlisting{graph-theory/SAP.cpp}
+			\subsection{最短路-gwx}
+				\lstinputlisting{graph-theory/shortest-path-gwx.cpp}
+			\subsection{SPFA判负环-wrz}
+				\lstinputlisting{graph-theory/SPFA-check-negtive-cycle-wrz.cpp}
+			\subsection{spfa费用流-gwx}
+				\lstinputlisting{graph-theory/spfa-cost-flow-gwx.cpp}
+			\subsection{斯坦纳树}
+				\lstinputlisting{graph-theory/SteinerTree.cpp}
+			\subsection{stoer-wagner无向图最小割树}
+				\lstinputlisting{graph-theory/stoer-wagner-algorithm.cpp}
+			\subsection{tarjan-gwx}
+				\lstinputlisting{graph-theory/tarjan-gwx.cpp}
+			\subsection{tarjan-wrz}
+				\lstinputlisting{graph-theory/tarjan-wrz.cpp}
+			\subsection{朱刘算法-gwx}
+				\lstinputlisting{graph-theory/zhu-liu-algorithm-gwx.cpp}
+			\subsection{zkw费用流}
+				\lstinputlisting{graph-theory/zkw-cost-flow-gwx.cpp}
+		\section{数论}
+			\subsection{杜教筛}
+				\lstinputlisting{number-theory/dujiaoshai-sum-of-Mobius-function.cpp}
+			\subsection{求逆元}
+				\lstinputlisting{number-theory/get-inversion.cpp}
+			\subsection{莫比乌斯-gwx}
+				\lstinputlisting{number-theory/get-maupassant-function-gwx.cpp}
+			\subsection{直线下整点}
+				\lstinputlisting{number-theory/integer-lattice-under-segment.cpp}
+			\subsection{拉格朗日插值}
+				\lstinputlisting{number-theory/Lagrange-polynomials-O(n)-O(nlogn).cpp}
+			\subsection{线性回归}
+				\lstinputlisting{number-theory/linear-recurrence.cpp}
+			\subsection{素数测试-gwx}
+				\lstinputlisting{number-theory/pollard-rho-and-primality-test-gwx.cpp}
+			\subsection{原根-gwx}
+				\lstinputlisting{number-theory/primitive-root-gwx.cpp}
+			\subsection{勾股数}
+				\lstinputlisting{number-theory/Pythagorean-triple.txt}
+		\section{字符串}
+			\subsection{AC自动机-gwx}
+				\lstinputlisting{string/AC-automaton-gwx.cpp}
+			\subsection{AC自动机-wrz}
+				\lstinputlisting{string/AC-automaton-wrz.cpp}
+			\subsection{exKMP-gwx}
+				\lstinputlisting{string/exkmp-gwx.cpp}
+			\subsection{KMP-gwx}
+				\lstinputlisting{string/KMP-gwx.cpp}
+			\subsection{KMP-wrz}
+				\lstinputlisting{string/KMP-wrz.cpp}
+			\subsection{最小表示-wrz}
+				\lstinputlisting{string/lexicographically-minimal-string-rotation-wrz.cpp}
+			\subsection{最小表示-gwx}
+				\lstinputlisting{string/minimal-representation-gwx.cpp}
+			\subsection{马拉车-gwx}
+				\lstinputlisting{string/manacher-gwx.cpp}
+			\subsection{回文树-wrz}
+				\lstinputlisting{string/palindromic-tree-wrz.cpp}
+			\subsection{后缀数组-gwx}
+				\lstinputlisting{string/suffix-array-gwx.cpp}
+			\subsection{后缀数组-wrz}
+				\lstinputlisting{string/suffix-array-wrz.cpp}
+			\subsection{后缀数组SAIS}
+				\lstinputlisting{string/suffix-array-SAIS.cpp}
+			\subsection{后缀自动机-gwx}
+				\lstinputlisting{string/suffix-automaton-gwx.cpp}
+			\subsection{后缀自动机-wrz}
+				\lstinputlisting{string/suffix-automaton-wrz.cpp}
+			\subsection{ex后缀自动机-wrz}
+				\lstinputlisting{string/ex-suffix-automaton-wrz.cpp}
+		\section{其他}
+			\subsection{cout输出小数}
+				\lstinputlisting{tricks/control-cout-precision.cpp}
+			\subsection{枚举子集}
+				\lstinputlisting{tricks/enumerate-subset.cpp}
+			\subsection{梅森旋转}
+				\lstinputlisting{tricks/mersenne-twister.cpp}
+			\subsection{乘法取模}
+				\lstinputlisting{tricks/O1-multiply-mod.cpp}
+			\subsection{释放容器内存}
+				\lstinputlisting{tricks/truly-release-container-space.cpp}
+			\subsection{tuple}
+				\lstinputlisting{tricks/tuple.cpp}
+			\subsection{读入优化}
+				\lstinputlisting{tricks/unbeatable-input-acceleration.cpp}
+			\subsection{蔡勒公式}
+				\lstinputlisting{tricks/zellers-congruence.cpp}
+			\subsection{dancing-links}
+				\lstinputlisting{tricks/dancing-links.cpp}
+		\section{提示}
+			\subsection{费用流}
+				\lstinputlisting{notes/cost-flow.txt}
+			\subsection{网络流}
+				\lstinputlisting{notes/flow.txt}
+			\subsection{莫比乌斯}
+				\lstinputlisting{notes/get-mu.txt}
+			\subsection{矩阵树定理}
+				\lstinputlisting{notes/matrix-tree.txt}
+			\subsection{Java}
+				\lstinputlisting{notes/javaNote.java}
+		\section{附录-数学公式}
+		\end{spacing}
+		\endgroup
+	%\end{multicols}
+%	\end{CJK}
+\end{document}
