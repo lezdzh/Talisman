@@ -1,3 +1,4 @@
+// 对都是数字的数组做SA时要保证数组中没有0，否则height等可能出问题
 char s[N];
 int n, t1[N], t2[N], sa[N], rank[N], sum[N], height[N], lef, rig; // 数组开两倍
 void SA_build()
