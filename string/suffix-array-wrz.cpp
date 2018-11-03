@@ -25,5 +25,5 @@ void SA_build()
     }
     for(int i = 1; i <= n; i++) rank[sa[i]] = i;
     for(int i = 1, k = 0; i <= n; height[rank[i++]] = k?k--:k)
-        for(; s[i+k] == s[sa[rank[i]-1]+k]; k++);
+        for(; s[i+k] == s[sa[ran[i]-1]+k] && i+k <= n && sa[ran[i]-1]+k <= n; k++);
 }
