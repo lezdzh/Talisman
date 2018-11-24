@@ -45,5 +45,8 @@ public class javaNote
 		hash.add(x); // 把x加进hash table
 		hash.remove(x); // 从hash table中删去x
 
+		Arrays.sort(arr, 1, n+1); // arr 是需要排序的数组，后两个参数分别是排序的起始位置和结束位置+1，还可以有第四个参数是比较函数 
+		// Arrays.sort(arr, a, b, cmp) = sort(arr+a, arr+b, cmp)
+
 	}
 }
