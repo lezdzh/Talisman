@@ -1,4 +1,4 @@
-//NµãÊý, M±ßÊý, P¹Ø¼üµãÊý
+//Nç‚¹æ•°, Mè¾¹æ•°, På…³é”®ç‚¹æ•°
 const int inf = 0x3f3f3f3f;
 int n, m, p, status, idx[P], f[1 << P][N];
 priority_queue<pair<int, int> > q; //int top, h[N];
@@ -20,9 +20,9 @@ int main() {
 	scanf("%d%d%d", &n, &m, &p);
 	status = 1 << p;
 	tot = 0; memset(lst, 0, sizeof(lst));
-	/*Çó×îÐ¡Éú³ÉÉ­ÁÖ
-	  Ã¿¿ÃÉú³ÉÊ÷ÖÐÖÁÉÙÑ¡ÔñÒ»¸öµã£¬µãÈ¨Îª´ú¼Û
-	  ÐÂ¿ªÒ»¸ö¿Õ°×¹Ø¼üµã0×÷ÎªÔ´
+	/*æ±‚æœ€å°ç”Ÿæˆæ£®æž—
+	  æ¯æ£µç”Ÿæˆæ ‘ä¸­è‡³å°‘é€‰æ‹©ä¸€ä¸ªç‚¹ï¼Œç‚¹æƒä¸ºä»£ä»·
+	  æ–°å¼€ä¸€ä¸ªç©ºç™½å…³é”®ç‚¹0ä½œä¸ºæº
 	  Add(0, i, val[i]); Add(i, 0, val[i]);*/
 	for (int i = 1; i <= p; i++) scanf("%d", &idx[i]);
 	memset(f, 0x3f, sizeof(f));
