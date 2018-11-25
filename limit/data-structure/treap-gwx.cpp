@@ -1,3 +1,4 @@
+//srand()
 struct node
 {
 	int pri, val, c, s;    //pri: random value; c: times of showing; s: size of subtree
@@ -7,11 +8,9 @@ struct node
 		return x < val ? 0 : 1;
 	}
 } a[maxn];
-
 void maintain(int u)  {
 	a[u].s = a[u].c + a[a[u].ch[0]].s + a[a[u].ch[1]].s;
 }
-
 void rotate(int &u, int d)
 {
 	int tmp = a[u].ch[d ^ 1];
@@ -20,7 +19,6 @@ void rotate(int &u, int d)
 	maintain(u); maintain(tmp);
 	u = tmp;
 }
-
 void insert(int &u, int val)
 {
 	if(!u)
@@ -35,7 +33,6 @@ void insert(int &u, int val)
 	insert(a[u].ch[d], val);
 	if(a[a[u].ch[d]].pri > a[u].pri) rotate(u, d ^ 1);
 }
-
 int find(int u, int val, int comp, int &res)
 {
 	int d = a[u].cmp(val);
@@ -48,7 +45,6 @@ int find(int u, int val, int comp, int &res)
 	}
 	return find(a[u].ch[d], val, comp, res);
 }
-
 void remove(int &u)
 {
 	if(!a[u].ch[0]) u = a[u].ch[1];
@@ -59,7 +55,6 @@ void remove(int &u)
 		rotate(u, d); remove(a[u].ch[d]);
 	}
 }
-
 void del(int &u, int val)
 {
 	if(find(root, val, -2, val) == -1) return;
@@ -72,7 +67,6 @@ void del(int &u, int val)
 	}
 	else del(a[u].ch[d], val);
 }
-
 int find_rank(int u, int val)
 {
 	int d = a[u].cmp(val);
@@ -80,14 +74,12 @@ int find_rank(int u, int val)
 	if(d == 0) return find_rank(a[u].ch[0], val);
 	return a[u].s - a[a[u].ch[1]].s + find_rank(a[u].ch[1], val);
 }
-
 int find_kth(int u, int k)
 {
 	if(k <= a[a[u].ch[0]].s) return find_kth(a[u].ch[0], k);
 	if(k > a[a[u].ch[0]].s + a[u].c) return find_kth(a[u].ch[1], k - a[a[u].ch[0]].s - a[u].c);
 	return a[u].val;
 }
-
 int pre(int val)
 {
 	int ans = -inf;
@@ -100,7 +92,6 @@ int pre(int val)
 	}
 	return ans;
 }
-
 int post(int val)
 {
 	int ans = inf;
@@ -113,4 +104,3 @@ int post(int val)
 	}
 	return ans;
 }
-//srand()

@@ -6,7 +6,6 @@ struct Node {
 		l = r = u = d = col = NULL;
 	}
 } *root;
-
 void cover(Node *c) {
 	c->l->r = c->r; c->r->l = c->l;
 	for (Node *u = c->d; u != c; u = u->d)
@@ -16,7 +15,6 @@ void cover(Node *c) {
 			-- v->col->size;
 		}
 }
-
 void uncover(Node *c) {
 	for (Node *u = c->u; u != c; u = u->u) {
 		for (Node *v = u->l; v != u; v = v->l) {
@@ -27,7 +25,6 @@ void uncover(Node *c) {
 	}
 	c->l->r = c; c->r->l = c;
 }
-
 std::vector<int> answer;
 bool search(int k) {
 	if (root->r == root) return true;
@@ -52,11 +49,9 @@ bool search(int k) {
 		return succ;
 	}
 }
-
 bool entry[CR][CC];
 Node *who[CR][CC];
 int cr, cc;
-
 void construct() {
 	root = new Node();
 	Node *last = root;
@@ -93,7 +88,6 @@ void construct() {
 			}
 	}
 }
-
 void destruct() {
 	for (Node *u = root->r; u != root; ) {
 		for (Node *v = u->d; v != u; ) {

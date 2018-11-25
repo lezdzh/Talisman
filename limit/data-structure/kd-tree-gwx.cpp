@@ -38,7 +38,6 @@ int build(int l, int r, int f)
 	a[x].ch[1] = build(x + 1, r, f ^ 1);
 	return x;
 }
-
 void update(pr &a, rev x)
 {
 	if(a.size() < K)
@@ -49,7 +48,6 @@ void update(pr &a, rev x)
 		a.push(x);
 	}
 }
-
 pr merge(pr a, pr b)
 {
 	int s1 = a.size(), s2 = b.size();
@@ -72,7 +70,6 @@ pr merge(pr a, pr b)
 		return a;
 	}
 }
-
 pr query(int u, Point x, int f)
 {
 	if(!u)
@@ -90,7 +87,6 @@ pr query(int u, Point x, int f)
 	res = merge(res, query(a[u].ch[d ^ 1], x, f ^ 1));
 	return res;
 }
-
 pr solve(Point p)	//离p最近的K个点
 {
 	int root = build(1, tot, 0);

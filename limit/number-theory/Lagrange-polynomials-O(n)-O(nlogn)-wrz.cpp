@@ -1,3 +1,4 @@
+// 用之前必须先init(); 如果所有的逆元都能预处理就是O(n)的，否则是O(nlogn)的
 #define MOD 1000000007
 int inv[N], invf[N], f[N];
 int fpow(int a, int b)
@@ -35,7 +36,3 @@ void init()
 	invf[0] = 1; 
 	for(int i = 1; i < N; i++) invf[i] = 1ll * invf[i-1] * inv[i] % MOD;
 }
-/*
-	用之前必须先init()
-	如果所有的逆元都能预处理就是O(n)的，否则是O(nlogn)的
-*/

@@ -70,10 +70,10 @@
 		\begin{spacing}{0.8}
 		\footnotesize
 		\section{代数}
-			\subsection{FFT-gwx}
-				\lstinputlisting{algebra/FFT-gwx.cpp}
 			\subsection{FFT-wrz}
 				\lstinputlisting{algebra/FFT-wrz.cpp}
+			\subsection{FWT}
+				\lstinputlisting{algebra/FWT.cpp}
 			\subsection{高精度-wrz}
 				\lstinputlisting{algebra/high-precision-wrz.cpp}
 			\subsection{线性基-gwx}
@@ -106,27 +106,19 @@
 			\subsection{三维凸包}
 				\lstinputlisting{computational-geometry/3d/convex.cpp}
 		\section{数据结构}
-			\subsection{KD树}
-				\lstinputlisting{data-structure/kd-tree.cpp}
+			\subsection{KD树-wrz}
+				\lstinputlisting{data-structure/kd-tree-3d-wrz.cpp}
 			\subsection{KD树-gwx}
 				\lstinputlisting{data-structure/kd-tree-gwx.cpp}
-			\subsection{lct-gwx}
-				\lstinputlisting{data-structure/lct-gwx.cpp}
 			\subsection{LCT-wrz}
 				\lstinputlisting{data-structure/LCT-wrz.cpp}
 			\subsection{左偏树-wrz}
 				\lstinputlisting{data-structure/leftist-tree-wrz.cpp}
-			\subsection{splay-gwx}
-				\lstinputlisting{data-structure/splay-gwx.cpp}
 			\subsection{splay-wrz}
 				\lstinputlisting{data-structure/splay-wrz.cpp}
 			\subsection{treap-gwx}
 				\lstinputlisting{data-structure/treap-gwx.cpp}
-			\subsection{zkw线段树}
-				\lstinputlisting{data-structure/zkw-segment-tree.cpp}
 		\section{图论}
-			\subsection{2-SAT}
-				\lstinputlisting{graph-theory/2-SAT.txt}
 			\subsection{上下界网络流}
 				\lstinputlisting{graph-theory/flow.txt}
 			\subsection{矩阵树定理}
@@ -137,8 +129,6 @@
 				\lstinputlisting{graph-theory/blossom-algorithm.cpp}
 			\subsection{支配树-gwx}
 				\lstinputlisting{graph-theory/dominator_tree-gwx.cpp}
-			\subsection{支配树-wrz}
-				\lstinputlisting{graph-theory/dominator-tree-wrz.cpp}
 			\subsection{欧拉回路-wrz}
 				\lstinputlisting{graph-theory/Euler-circuit-wrz.cpp}
 			\subsection{Hopcoft-Karp}
@@ -151,8 +141,6 @@
 				\lstinputlisting{graph-theory/kth-shortest-path-mergeable-heap.cpp}
 			\subsection{最大团}
 				\lstinputlisting{graph-theory/maximum-clique.cpp}
-			\subsection{SAP网络流}
-				\lstinputlisting{graph-theory/SAP.cpp}
 			\subsection{SPFA判负环-wrz}
 				\lstinputlisting{graph-theory/SPFA-check-negtive-cycle-wrz.cpp}
 			\subsection{斯坦纳树}
@@ -161,8 +149,6 @@
 				\lstinputlisting{graph-theory/stoer-wagner-algorithm.cpp}
 			\subsection{tarjan-gwx}
 				\lstinputlisting{graph-theory/tarjan-gwx.cpp}
-			\subsection{tarjan-wrz}
-				\lstinputlisting{graph-theory/tarjan-wrz.cpp}
 			\subsection{朱刘算法-gwx}
 				\lstinputlisting{graph-theory/zhu-liu-algorithm-gwx.cpp}
 			\subsection{zkw费用流}
@@ -170,8 +156,6 @@
 		\section{数论}
 			\subsection{杜教筛}
 				\lstinputlisting{number-theory/dujiaoshai-sum-of-Mobius-function.cpp}
-			\subsection{求逆元}
-				\lstinputlisting{number-theory/get-inversion.cpp}
 			\subsection{直线下整点}
 				\lstinputlisting{number-theory/integer-lattice-under-segment.cpp}
 			\subsection{拉格朗日插值}
@@ -185,28 +169,20 @@
 			\subsection{勾股数}
 				\lstinputlisting{number-theory/Pythagorean-triple.txt}
 		\section{字符串}
-			\subsection{AC自动机-gwx}
-				\lstinputlisting{string/AC-automaton-gwx.cpp}
 			\subsection{AC自动机-wrz}
 				\lstinputlisting{string/AC-automaton-wrz.cpp}
-			\subsection{exKMP-gwx}
+			\subsection{扩展KMP-gwx}
 				\lstinputlisting{string/exkmp-gwx.cpp}
-			\subsection{最小表示-wrz}
-				\lstinputlisting{string/lexicographically-minimal-string-rotation-wrz.cpp}
-			\subsection{最小表示-gwx}
-				\lstinputlisting{string/minimal-representation-gwx.cpp}
 			\subsection{马拉车-gwx}
 				\lstinputlisting{string/manacher-gwx.cpp}
+			\subsection{最小表示-gwx}
+				\lstinputlisting{string/minimal-representation-gwx.cpp}
 			\subsection{回文树-wrz}
 				\lstinputlisting{string/palindromic-tree-wrz.cpp}
-			\subsection{后缀数组-gwx}
-				\lstinputlisting{string/suffix-array-gwx.cpp}
 			\subsection{后缀数组-wrz}
 				\lstinputlisting{string/suffix-array-wrz.cpp}
 			\subsection{后缀数组SAIS}
 				\lstinputlisting{string/suffix-array-SAIS.cpp}
-			\subsection{后缀自动机-gwx}
-				\lstinputlisting{string/suffix-automaton-gwx.cpp}
 			\subsection{后缀自动机-wrz}
 				\lstinputlisting{string/suffix-automaton-wrz.cpp}
 			\subsection{ex后缀自动机-wrz}
@@ -220,7 +196,7 @@
 				\lstinputlisting{others/enumerate-subset.cpp}
 			\subsection{梅森旋转}
 				\lstinputlisting{others/mersenne-twister.cpp}
-			\subsection{乘法取模}
+			\subsection{大数乘法取模}
 				\lstinputlisting{others/O1-multiply-mod.cpp}
 			
 		\section{提示}

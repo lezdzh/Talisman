@@ -1,11 +1,6 @@
+typedef complex<double> comp;
 int len;
-struct comp
-{
-	double r, i;
-	comp operator + (const comp &that) {return (comp){r+that.r, i+that.i};}
-	comp operator - (const comp &that) {return (comp){r-that.r, i-that.i};}
-	comp operator * (const comp &that) {return (comp){r*that.r-i*that.i, r*that.i+i*that.r};}
-}w[N<<1], a[N<<1], b[N<<1], c[N<<1]; // 数组记得至少开两倍
+comp w[N<<1], a[N<<1], b[N<<1], c[N<<1]; // 数组记得至少开两倍
 void init()
 {
 	double pi = acos(-1.0);

@@ -1,3 +1,4 @@
+// 用之前必须先init(); 如果n很大，求和记得开long long; 如果有取模，求和记得改取模
 #define N 1000005 // (10^9)^(2/3)
 #define M 3333331 // hash siz
 int prime[N], notprime[N], pcnt, mu[N], pre[N];
@@ -31,9 +32,3 @@ void init()
     }
     for(int i = 1; i < N; i++) pre[i] = pre[i-1] + mu[i];
 }
-
-/*
-	用之前必须先init()
-	如果n很大，求和记得开long long
-	如果有取模，求和记得改取模
-*/
