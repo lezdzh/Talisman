@@ -40,7 +40,7 @@
 	tabsize=4,
 	numbers=left,
 	numbersep=5.5pt,
-	numberstyle=\bfseries\ttfamily\color{numbercolor},
+	numberstyle=\tiny\bfseries\ttfamily\color{numbercolor},
 	identifierstyle=\color{identifiercolor},
 	commentstyle=\color{commentcolor},
 	keywordstyle=\color{keywordcolor},
@@ -58,7 +58,7 @@
 
 \begin{document}
 	\maketitle
-	%\begin{multicols}{2}
+	\begin{multicols}{2}
 %	\begin{CJK}{UTF8}{gbsn}
 		\setcounter{tocdepth}{3}
 		\begingroup
@@ -87,18 +87,12 @@
 				\lstinputlisting{computational-geometry/2d/2d-wrz.cpp}
 			\subsection{basis}
 				\lstinputlisting{computational-geometry/2d/basis.cpp}
-			\subsection{circle-arc-struct}
-				\lstinputlisting{computational-geometry/2d/circle-arc-struct.cpp}
 			\subsection{circles-intersections}
 				\lstinputlisting{computational-geometry/2d/circles-intersections.cpp}
 			\subsection{cirque-area-merge}
 				\lstinputlisting{computational-geometry/2d/cirque-area-merge.cpp}
 			\subsection{凸包}
 				\lstinputlisting{computational-geometry/2d/convex.cpp}
-			\subsection{point-in-polygon}
-				\lstinputlisting{computational-geometry/2d/point-in-polygon.cpp}
-			\subsection{point-struct}
-				\lstinputlisting{computational-geometry/2d/point-struct.cpp}
 			\subsection{三角形内心，外心，垂心}
 				\lstinputlisting{computational-geometry/2d/triangle.cpp}
 			\subsection{三维计算几何}
@@ -118,7 +112,13 @@
 				\lstinputlisting{data-structure/splay-wrz.cpp}
 			\subsection{treap-gwx}
 				\lstinputlisting{data-structure/treap-gwx.cpp}
+			\subsection{可持久化平衡树}
+				\lstinputlisting{data-structure/persistent-balanced-tree.cpp}
 		\section{图论}
+			\subsection{树哈希}
+				\input{graph-theory/tree-hash.tex}
+			\subsection{匹配}
+				\input{graph-theory/matching.tex}
 			\subsection{上下界网络流}
 				\lstinputlisting{graph-theory/flow.txt}
 			\subsection{矩阵树定理}
@@ -127,6 +127,8 @@
 				\lstinputlisting{graph-theory/biconnected-graph-edge-gwx.cpp}
 			\subsection{带花树}
 				\lstinputlisting{graph-theory/blossom-algorithm.cpp}
+			\subsection{弦图}
+				\lstinputlisting{graph-theory/chordal-graph.cpp}
 			\subsection{支配树-gwx}
 				\lstinputlisting{graph-theory/dominator_tree-gwx.cpp}
 			\subsection{欧拉回路-wrz}
@@ -168,6 +170,12 @@
 				\lstinputlisting{number-theory/primitive-root-gwx.cpp}
 			\subsection{勾股数}
 				\lstinputlisting{number-theory/Pythagorean-triple.txt}
+			\subsection{Pell方程}
+				\input{number-theory/pell-equation.tex}
+			\subsection{平方剩余}
+				\input{number-theory/quadric-residue.tex}
+			\subsection{博弈论}
+				\input{number-theory/game-theory.tex}
 		\section{字符串}
 			\subsection{AC自动机-wrz}
 				\lstinputlisting{string/AC-automaton-wrz.cpp}
@@ -210,11 +218,15 @@
 				\lstinputlisting{hints/truly-release-container-space.cpp}
 			\subsection{tuple}
 				\lstinputlisting{hints/tuple.cpp}
-			\subsection{读入优化}
+			\subsection{读入优化 \& 手开O3}
 				\lstinputlisting{hints/unbeatable-input-acceleration.cpp}
+			\subsection{手开栈}
+				\input{hints/stack-hack.tex}
 		\section{附录-数学公式}
+			\input{appendix-formula/table-of-formulae.tex}
+			\input{appendix-formula/table-of-range.tex}
 		\end{spacing}
 		\endgroup
-	%\end{multicols}
+	\end{multicols}
 %	\end{CJK}
 \end{document}

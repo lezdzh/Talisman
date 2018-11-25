@@ -1,6 +1,8 @@
 // getchar()读入优化 << 关同步cin << 此优化
 // 用isdigit()会小幅变慢
 // 返回 false 表示读到文件尾
+#define __ __attribute__ ((optimize ("-O3"))) 
+#define _ __ __inline __attribute__ ((__gnu_inline__, __always_inline__, __artificial__)) 
 namespace Reader {
     const int L = (1 << 15) + 5;
     char buffer[L], *S, *T;
