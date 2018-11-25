@@ -9,7 +9,7 @@ struct Circle {
 	Circle (point o = point(0, 0), double r = 0, int tp = 0) : o(o), r(r), tp(tp) {}
 };
 struct Event {
-	point p; double ang;	int delta;
+	point p; double ang; int delta;
 	Event (point p = point(0, 0), double ang = 0, double delta = 0) : p(p), ang(ang), delta(delta) {}
 };
 bool operator < (const Event &a, const Event &b) {return a.ang < b.ang;}

@@ -19,7 +19,7 @@ bool onSeg(const Line& l, const Point& p) {  // 点在线段上
 	return sign(det(p - l.a, l.b - l.a)) == 0 && sign(dot(p - l.a, p - l.b)) <= 0;}
 Point projection(const Line & l, const Point& p) {
 	return l.a + (l.b - l.a) * (dot(p - l.a, l.b - l.a) / (l.b - l.a).len2());}
-DB disToLine(const Line& l, const Point& p) {  // 点到*直线*距离
+DB disToLine(const Line& l, const Point& p) {  // 点到直线距离
 	return fabs(det(p - l.a, l.b - l.a) / (l.b - l.a).len());}
 DB disToSeg(const Line& l, const Point& p) {  // 点到线段距离
 	return sign(dot(p - l.a, l.b - l.a)) * sign(dot(p - l.b, l.a - l.b)) == 1 ? disToLine(l, p) : std::min((p - l.a).len(), (p - l.b).len());}
