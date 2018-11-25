@@ -21,14 +21,10 @@ struct Convex {
 		if ((int)a.size() >= 2) a.pop_back();
 		n = a.size();
 	}
-	void init(const std::vector<Point>& _a) {
-		clear(a); a = _a; n = a.size();
-		make_convex();
-	}
+	void init(const std::vector<Point>& _a) {clear(a); a = _a; n = a.size();make_convex();}
 	void read(int _n) {  // Won't make convex.
 		clear(a); n = _n; a.resize(n);
-		for (int i = 0; i < n; i++) 
-			a[i].read();
+		for (int i = 0; i < n; i++) a[i].read();
 	}
 	std::pair<DB, int> get_tangent(
 			const std::vector<Point>& convex, const Point& vec) {
@@ -36,8 +32,7 @@ struct Convex {
 		assert(r >= 0);
 		for (; l + 1 < r; ) {
 			int mid = (l + r) / 2;
-			if (sign(det(convex[mid + 1] - convex[mid], vec)) > 0)
-				r = mid;
+			if (sign(det(convex[mid + 1] - convex[mid], vec)) > 0)r = mid;
 			else l = mid;
 		}
 		return std::max(std::make_pair(det(vec, convex[r]), r),

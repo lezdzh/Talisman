@@ -1,22 +1,11 @@
 struct Point {
 	DB x, y;
-	Point rotate(DB ang) const {  // 逆时针旋转 ang 弧度
-		return Point(cos(ang) * x - sin(ang) * y,
-				cos(ang) * y + sin(ang) * x);
-	}
-	Point turn90() const {  // 逆时针旋转 90 度
-		return Point(-y, x);
-	}
-	Point unit() const {
-		return *this / len();
-	}
+	Point rotate(DB ang) const {return Point(cos(ang) * x - sin(ang) * y, cos(ang) * y + sin(ang) * x);} // 逆时针旋转 ang 弧度
+	Point turn90() const {return Point(-y, x);} // 逆时针旋转 90 度
+	Point unit() const {return *this / len();}
 };
-DB dot(const Point& a, const Point& b) {
-	return a.x * b.x + a.y * b.y;
-}
-DB det(const Point& a, const Point& b) {
-	return a.x * b.y - a.y * b.x;
-}
+DB dot(const Point& a, const Point& b) {return a.x * b.x + a.y * b.y;}
+DB det(const Point& a, const Point& b) {return a.x * b.y - a.y * b.x;}
 #define cross(p1,p2,p3) ((p2.x-p1.x)*(p3.y-p1.y)-(p3.x-p1.x)*(p2.y-p1.y))
 #define crossOp(p1,p2,p3) sign(cross(p1,p2,p3))
 bool isLL(const Line& l1, const Line& l2, Point& p) {  // 直线与直线交点
@@ -27,17 +16,13 @@ bool isLL(const Line& l1, const Line& l2, Point& p) {  // 直线与直线交点
 	return true;
 }
 bool onSeg(const Line& l, const Point& p) {  // 点在线段上
-	return sign(det(p - l.a, l.b - l.a)) == 0 && sign(dot(p - l.a, p - l.b)) <= 0;
-}
+	return sign(det(p - l.a, l.b - l.a)) == 0 && sign(dot(p - l.a, p - l.b)) <= 0;}
 Point projection(const Line & l, const Point& p) {
-	return l.a + (l.b - l.a) * (dot(p - l.a, l.b - l.a) / (l.b - l.a).len2());
-}
+	return l.a + (l.b - l.a) * (dot(p - l.a, l.b - l.a) / (l.b - l.a).len2());}
 DB disToLine(const Line& l, const Point& p) {  // 点到*直线*距离
-	return fabs(det(p - l.a, l.b - l.a) / (l.b - l.a).len());
-}
+	return fabs(det(p - l.a, l.b - l.a) / (l.b - l.a).len());}
 DB disToSeg(const Line& l, const Point& p) {  // 点到线段距离
-	return sign(dot(p - l.a, l.b - l.a)) * sign(dot(p - l.b, l.a - l.b)) == 1 ? disToLine(l, p) : std::min((p - l.a).len(), (p - l.b).len());
-}
+	return sign(dot(p - l.a, l.b - l.a)) * sign(dot(p - l.b, l.a - l.b)) == 1 ? disToLine(l, p) : std::min((p - l.a).len(), (p - l.b).len());}
 // 圆与直线交点
 bool isCL(Circle a, Line l, Point& p1, Point& p2) {
 	DB x = dot(l.a - a.o, l.b - l.a),
@@ -54,8 +39,7 @@ DB areaCC(const Circle& c1, const Circle& c2) {
 	if (sign(d - (c1.r + c2.r)) >= 0) return 0;
 	if (sign(d - std::abs(c1.r - c2.r)) <= 0) {
 		DB r = std::min(c1.r, c2.r);
-		return r * r * PI;
-	}
+		return r * r * PI;	}
 	DB x = (d * d + c1.r * c1.r - c2.r * c2.r) / (2 * d),
 		t1 = acos(x / c1.r), t2 = acos((d - x) / c2.r);
 	return c1.r * c1.r * t1 + c2.r * c2.r * t2 - d * c1.r * sin(t1);
@@ -130,6 +114,5 @@ std::vector<Point> convexCut(const std::vector<Point>&ps, Point q1, Point q2) {
 		int d1 = crossOp(q1,q2,p1), d2 = crossOp(q1,q2,p2);
 		if (d1 >= 0) qs.push_back(p1);
 		if (d1 * d2 < 0) qs.push_back(isSS(p1, p2, q1, q2));
-	}
-	return qs;
+	} return qs;
 }
