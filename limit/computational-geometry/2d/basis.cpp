@@ -1,10 +1,3 @@
-int sign(DB x) {
-	return (x > eps) - (x < -eps);
-}
-DB msqrt(DB x) {
-	return sign(x) > 0 ? sqrt(x) : 0;
-}
-
 struct Point {
 	DB x, y;
 	Point rotate(DB ang) const {  // 逆时针旋转 ang 弧度
@@ -140,15 +133,3 @@ std::vector<Point> convexCut(const std::vector<Point>&ps, Point q1, Point q2) {
 	}
 	return qs;
 }
-// 求凸包
-std::vector<Point> convexHull(std::vector<Point> ps) {
-	int n = ps.size(); if (n <= 1) return ps;
-	std::sort(ps.begin(), ps.end());
-	std::vector<Point> qs;
-	for (int i = 0; i < n; qs.push_back(ps[i ++]))
-		while (qs.size() > 1 && sign(det(qs[qs.size() - 2], qs.back(), ps[i])) <= 0)
-			qs.pop_back();
-	for (int i = n - 2, t = qs.size(); i >= 0; qs.push_back(ps[i --]))
-		while ((int)qs.size() > t && sign(det(qs[qs.size() - 2], qs.back(), ps[i])) <= 0)
-			qs.pop_back();
-	return qs;

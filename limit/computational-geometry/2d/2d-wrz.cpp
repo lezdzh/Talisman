@@ -1,12 +1,8 @@
-// c++11
-
 #include<bits/stdc++.h>
 using namespace std;
-
 const double inf = 1e9;
 const double eps = 1e-9;
 const double pi = acos(-1.0);
-
 /*精度误差下的各种运算*/
 bool le(double x, double y){return x < y - eps;} // x严格小于y
 bool leq(double x, double y){return x < y + eps;} // x小于等于y
