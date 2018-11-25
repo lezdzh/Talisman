@@ -3,6 +3,7 @@
 void dfs(int u, int pa)
 {
 	d[u] = l[u] = ++timer;
+	st.push(u); vst[u] = 1;
 	int child = 0;
 	for(int i = tail[u]; i; i = e[i].next)
 		if(!d[e[i].v])
