@@ -1,0 +1,171 @@
+\contentsline {section}{\numberline {1}计算几何}{3}
+\contentsline {subsection}{\numberline {1.1}二维计算几何-wrz}{3}
+\contentsline {subsection}{\numberline {1.2}basis}{3}
+\contentsline {subsection}{\numberline {1.3}圆交}{4}
+\contentsline {subsection}{\numberline {1.4}圆的面积并}{5}
+\contentsline {subsection}{\numberline {1.5}凸包}{5}
+\contentsline {subsection}{\numberline {1.6}三角形内心，外心，垂心}{6}
+\contentsline {subsection}{\numberline {1.7}费马点}{6}
+\contentsline {subsection}{\numberline {1.8}多边形和圆的交}{6}
+\contentsline {subsection}{\numberline {1.9}点到凸包切线}{6}
+\contentsline {subsection}{\numberline {1.10}闵可夫斯基和}{6}
+\contentsline {subsection}{\numberline {1.11}最近点对}{6}
+\contentsline {subsection}{\numberline {1.12}最小覆盖圆}{6}
+\contentsline {subsection}{\numberline {1.13}最小覆盖球}{7}
+\contentsline {subsection}{\numberline {1.14}阿波罗尼茨圆}{7}
+\contentsline {subsection}{\numberline {1.15}圆幂}{7}
+\contentsline {subsection}{\numberline {1.16}球面}{7}
+\contentsline {subsection}{\numberline {1.17}公式}{7}
+\contentsline {subsubsection}{\numberline {1.17.1}Heron's Formula}{7}
+\contentsline {subsubsection}{\numberline {1.17.2}四面体内接球球心}{7}
+\contentsline {subsubsection}{\numberline {1.17.3}三角形内心}{7}
+\contentsline {subsubsection}{\numberline {1.17.4}三角形外心}{7}
+\contentsline {subsubsection}{\numberline {1.17.5}三角形垂心}{7}
+\contentsline {subsubsection}{\numberline {1.17.6}三角形偏心}{7}
+\contentsline {subsubsection}{\numberline {1.17.7}三角形内接外接圆半径}{7}
+\contentsline {subsubsection}{\numberline {1.17.8}Pick's Theorem}{7}
+\contentsline {subsubsection}{\numberline {1.17.9}Euler's Formula}{7}
+\contentsline {subsection}{\numberline {1.18}三角公式}{7}
+\contentsline {subsubsection}{\numberline {1.18.1}超球坐标系}{7}
+\contentsline {subsubsection}{\numberline {1.18.2}三维旋转公式}{7}
+\contentsline {subsubsection}{\numberline {1.18.3}立体角公式}{7}
+\contentsline {subsubsection}{\numberline {1.18.4}常用体积公式}{8}
+\contentsline {subsubsection}{\numberline {1.18.5}高维球体积}{8}
+\contentsline {subsection}{\numberline {1.19}三维计算几何}{8}
+\contentsline {subsection}{\numberline {1.20}三维凸包}{8}
+\contentsline {section}{\numberline {2}数据结构}{8}
+\contentsline {subsection}{\numberline {2.1}KD树-wrz}{8}
+\contentsline {subsection}{\numberline {2.2}KD树-gwx}{9}
+\contentsline {subsection}{\numberline {2.3}LCT-wrz}{9}
+\contentsline {subsection}{\numberline {2.4}左偏树-wrz}{10}
+\contentsline {subsection}{\numberline {2.5}splay-wrz}{10}
+\contentsline {subsection}{\numberline {2.6}treap-gwx}{11}
+\contentsline {subsection}{\numberline {2.7}可持久化平衡树}{11}
+\contentsline {section}{\numberline {3}图论}{11}
+\contentsline {subsection}{\numberline {3.1}匹配}{11}
+\contentsline {paragraph}{Tutte-Berge formula}{11}
+\contentsline {paragraph}{Tutte theorem}{11}
+\contentsline {paragraph}{Hall's marriage theorem}{11}
+\contentsline {subsection}{\numberline {3.2}Hopcoft-Karp}{11}
+\contentsline {subsection}{\numberline {3.3}KM-truly-n3}{12}
+\contentsline {subsection}{\numberline {3.4}tarjan-gwx}{12}
+\contentsline {subsection}{\numberline {3.5}边双联通-gwx}{12}
+\contentsline {subsection}{\numberline {3.6}最大团}{12}
+\contentsline {subsection}{\numberline {3.7}欧拉回路-wrz}{12}
+\contentsline {subsection}{\numberline {3.8}SPFA判负环-wrz}{13}
+\contentsline {subsection}{\numberline {3.9}k短路a星-gwx}{13}
+\contentsline {subsection}{\numberline {3.10}K短路可并堆}{13}
+\contentsline {subsection}{\numberline {3.11}上下界网络流}{14}
+\contentsline {paragraph}{有源汇上下界费用流}{14}
+\contentsline {paragraph}{无源汇上下界最小费用可行循环流}{14}
+\contentsline {paragraph}{上下界网络流}{14}
+\contentsline {subparagraph}{无源汇的上下界可行流}{14}
+\contentsline {subparagraph}{有源汇的上下界可行流}{14}
+\contentsline {subparagraph}{有源汇的上下界最大流}{14}
+\contentsline {subparagraph}{有源汇的上下界最小流}{14}
+\contentsline {subsection}{\numberline {3.12}zkw费用流}{14}
+\contentsline {subsection}{\numberline {3.13}stoer-wagner无向图最小割树}{15}
+\contentsline {subsection}{\numberline {3.14}朱刘算法-gwx}{15}
+\contentsline {subsection}{\numberline {3.15}树哈希}{15}
+\contentsline {subsection}{\numberline {3.16}矩阵树定理}{15}
+\contentsline {subsection}{\numberline {3.17}带花树}{15}
+\contentsline {subsection}{\numberline {3.18}支配树-gwx}{16}
+\contentsline {subsection}{\numberline {3.19}斯坦纳树}{16}
+\contentsline {subsection}{\numberline {3.20}弦图}{16}
+\contentsline {section}{\numberline {4}数学}{17}
+\contentsline {subsection}{\numberline {4.1}杜教筛}{17}
+\contentsline {subsection}{\numberline {4.2}直线下整点}{17}
+\contentsline {subsection}{\numberline {4.3}拉格朗日插值}{17}
+\contentsline {subsection}{\numberline {4.4}FFT-wrz}{17}
+\contentsline {subsection}{\numberline {4.5}NTT-gwx}{17}
+\contentsline {subsection}{\numberline {4.6}FWT}{18}
+\contentsline {subsection}{\numberline {4.7}高精度-wrz}{18}
+\contentsline {subsection}{\numberline {4.8}线性基-gwx}{19}
+\contentsline {subsection}{\numberline {4.9}线性递推}{19}
+\contentsline {subsection}{\numberline {4.10}单纯形}{19}
+\contentsline {subsection}{\numberline {4.11}素数测试-gwx}{19}
+\contentsline {subsection}{\numberline {4.12}原根-gwx}{20}
+\contentsline {subsection}{\numberline {4.13}勾股数}{20}
+\contentsline {subsection}{\numberline {4.14}Pell方程}{20}
+\contentsline {subsection}{\numberline {4.15}平方剩余}{20}
+\contentsline {subsection}{\numberline {4.16}多点求值与快速插值}{20}
+\contentsline {subsubsection}{\numberline {4.16.1}多点求值 与 快速插值}{20}
+\contentsline {subsection}{\numberline {4.17}多项式牛顿法}{20}
+\contentsline {subsubsection}{\numberline {4.17.1}多项式牛顿法}{20}
+\contentsline {section}{\numberline {5}字符串}{20}
+\contentsline {subsection}{\numberline {5.1}AC自动机-wrz}{20}
+\contentsline {subsection}{\numberline {5.2}扩展KMP-gwx}{21}
+\contentsline {subsection}{\numberline {5.3}Manacher-gwx}{21}
+\contentsline {subsection}{\numberline {5.4}最小表示-gwx}{21}
+\contentsline {subsection}{\numberline {5.5}回文树-wrz}{21}
+\contentsline {subsection}{\numberline {5.6}后缀数组-wrz}{21}
+\contentsline {subsection}{\numberline {5.7}后缀数组SAIS}{21}
+\contentsline {subsection}{\numberline {5.8}后缀自动机-wrz}{22}
+\contentsline {subsection}{\numberline {5.9}扩展后缀自动机-wrz}{22}
+\contentsline {subsection}{\numberline {5.10}结论}{22}
+\contentsline {subsubsection}{\numberline {5.10.1}双回文串}{22}
+\contentsline {subsubsection}{\numberline {5.10.2}Border 的结构}{22}
+\contentsline {subsubsection}{\numberline {5.10.3}子串最小后缀}{22}
+\contentsline {subsubsection}{\numberline {5.10.4}子串最大后缀}{22}
+\contentsline {section}{\numberline {6}其他}{22}
+\contentsline {subsection}{\numberline {6.1}蔡勒公式}{22}
+\contentsline {subsection}{\numberline {6.2}dancing-links}{22}
+\contentsline {subsection}{\numberline {6.3}枚举子集}{23}
+\contentsline {subsection}{\numberline {6.4}梅森旋转}{23}
+\contentsline {subsection}{\numberline {6.5}大数乘法取模}{23}
+\contentsline {section}{\numberline {7}提示}{23}
+\contentsline {subsection}{\numberline {7.1}Vimrc}{23}
+\contentsline {subsection}{\numberline {7.2}make支持c++11}{23}
+\contentsline {subsection}{\numberline {7.3}Java}{23}
+\contentsline {subsection}{\numberline {7.4}cout输出小数}{24}
+\contentsline {subsection}{\numberline {7.5}释放容器内存}{24}
+\contentsline {subsection}{\numberline {7.6}tuple}{24}
+\contentsline {subsection}{\numberline {7.7}读入优化 \& 手开O3}{24}
+\contentsline {subsection}{\numberline {7.8}手开栈}{24}
+\contentsline {section}{\numberline {8}附录-数学公式}{24}
+\contentsline {subsection}{\numberline {8.1}}{24}
+\contentsline {subsubsection}{\numberline {8.1.1}Mobius Inversion}{24}
+\contentsline {subsubsection}{\numberline {8.1.2}Arithmetic Function}{24}
+\contentsline {subsubsection}{\numberline {8.1.3}Binomial Coefficients}{25}
+\contentsline {subsubsection}{\numberline {8.1.4}Fibonacci Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.5}Lucas Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.6}Catlan Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.7}Stirling Cycle Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.8}Stirling Subset Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.9}Motzkin Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.10}Eulerian Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.11}Harmonic Numbers}{25}
+\contentsline {subsubsection}{\numberline {8.1.12}Pentagonal Number Theorem}{25}
+\contentsline {subsubsection}{\numberline {8.1.13}Bell Numbers}{26}
+\contentsline {subsubsection}{\numberline {8.1.14}Bernoulli Numbers}{26}
+\contentsline {subsubsection}{\numberline {8.1.15}Sum of Powers}{26}
+\contentsline {subsubsection}{\numberline {8.1.16}Sum of Squares}{26}
+\contentsline {subsubsection}{\numberline {8.1.17}Pythagorean Triple}{26}
+\contentsline {subsubsection}{\numberline {8.1.18}Tetrahedron Volume}{26}
+\contentsline {subsubsection}{\numberline {8.1.19}杨氏矩阵 与 钩子公式}{26}
+\contentsline {subsubsection}{\numberline {8.1.20}重心}{26}
+\contentsline {subsubsection}{\numberline {8.1.21}常见游戏}{26}
+\contentsline {paragraph}{Anti-Nim游戏}{26}
+\contentsline {paragraph}{斐波那契博弈}{26}
+\contentsline {paragraph}{威佐夫博弈}{26}
+\contentsline {paragraph}{约瑟夫环}{26}
+\contentsline {subsubsection}{\numberline {8.1.22}错排公式}{26}
+\contentsline {subsubsection}{\numberline {8.1.23}概率相关}{26}
+\contentsline {subsubsection}{\numberline {8.1.24}常用泰勒展开}{26}
+\contentsline {subsubsection}{\numberline {8.1.25}Others (某些近似数值公式在这里)}{26}
+\contentsline {paragraph}{Binomial coefficients}{26}
+\contentsline {paragraph}{Fibonacci numbers}{27}
+\contentsline {paragraph}{Lucas numbers}{27}
+\contentsline {paragraph}{Catlan numbers}{27}
+\contentsline {paragraph}{Stirling cycle numbers}{27}
+\contentsline {paragraph}{Stirling subset numbers}{27}
+\contentsline {paragraph}{Motzkin numbers}{27}
+\contentsline {paragraph}{Eulerian numbers}{27}
+\contentsline {paragraph}{Harmonic numbers}{27}
+\contentsline {paragraph}{Pentagonal number theorem}{27}
+\contentsline {paragraph}{Bell numbers}{27}
+\contentsline {paragraph}{Bernoulli numbers}{27}
+\contentsline {paragraph}{Sum of powers}{27}
+\contentsline {paragraph}{Sum of squares}{28}
+\contentsline {paragraph}{Derangement}{28}
+\contentsline {paragraph}{Tetrahedron volume}{28}
