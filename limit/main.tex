@@ -28,6 +28,7 @@
 \definecolor{identifiercolor}{rgb}{0,0,0}
 \definecolor{commentcolor}{rgb}{0,0.5,0.1}
 \definecolor{keywordcolor}{rgb}{0.205,0.248,0.495}
+% \definecolor{keywordcolor}{rgb}{0.8,0.2,0.2}
 \definecolor{basiccolor}{rgb}{0.485,0.363,0.261}
 \definecolor{emphcolor}{rgb}{0.9,0.2,0}
 
@@ -69,27 +70,14 @@
 		\newpage
 		\begin{spacing}{0.8}
 		\footnotesize
-		\section{代数}
-			\subsection{FFT-wrz}
-				\lstinputlisting{algebra/FFT-wrz.cpp}
-			\subsection{FWT}
-				\lstinputlisting{algebra/FWT.cpp}
-			\subsection{高精度-wrz}
-				\lstinputlisting{algebra/high-precision-wrz.cpp}
-			\subsection{线性基-gwx}
-				\lstinputlisting{algebra/linear_basement-gwx.cpp}
-			\subsection{单纯形}
-				\lstinputlisting{algebra/simplex.cpp}
-			\subsection{NTT-gwx}
-				\lstinputlisting{algebra/NTT-gwx.cpp}
 		\section{计算几何}
 			\subsection{二维计算几何-wrz}
 				\lstinputlisting{computational-geometry/2d/2d-wrz.cpp}
 			\subsection{basis}
 				\lstinputlisting{computational-geometry/2d/basis.cpp}
-			\subsection{circles-intersections}
+			\subsection{圆交}
 				\lstinputlisting{computational-geometry/2d/circles-intersections.cpp}
-			\subsection{cirque-area-merge}
+			\subsection{圆的面积并}
 				\lstinputlisting{computational-geometry/2d/cirque-area-merge.cpp}
 			\subsection{凸包}
 				\lstinputlisting{computational-geometry/2d/convex.cpp}
@@ -115,73 +103,85 @@
 			\subsection{可持久化平衡树}
 				\lstinputlisting{data-structure/persistent-balanced-tree.cpp}
 		\section{图论}
-			\subsection{树哈希}
-				\input{graph-theory/tree-hash.tex}
 			\subsection{匹配}
 				\input{graph-theory/matching.tex}
-			\subsection{上下界网络流}
-				\lstinputlisting{graph-theory/flow.txt}
-			\subsection{矩阵树定理}
-				\lstinputlisting{graph-theory/matrix-tree.txt}
-			\subsection{边双联通-gwx}
-				\lstinputlisting{graph-theory/biconnected-graph-edge-gwx.cpp}
-			\subsection{带花树}
-				\lstinputlisting{graph-theory/blossom-algorithm.cpp}
-			\subsection{弦图}
-				\lstinputlisting{graph-theory/chordal-graph.cpp}
-			\subsection{支配树-gwx}
-				\lstinputlisting{graph-theory/dominator_tree-gwx.cpp}
-			\subsection{欧拉回路-wrz}
-				\lstinputlisting{graph-theory/Euler-circuit-wrz.cpp}
 			\subsection{Hopcoft-Karp}
 				\lstinputlisting{graph-theory/Hopcoft-Karp-algorithm.cpp}
 			\subsection{KM-truly-n3}
 				\lstinputlisting{graph-theory/KM-truly-n3.cpp}
+			\subsection{tarjan-gwx}
+				\lstinputlisting{graph-theory/tarjan-gwx.cpp}
+			\subsection{边双联通-gwx}
+				\lstinputlisting{graph-theory/biconnected-graph-edge-gwx.cpp}
+			\subsection{最大团}
+				\lstinputlisting{graph-theory/maximum-clique.cpp}
+			\subsection{欧拉回路-wrz}
+				\lstinputlisting{graph-theory/Euler-circuit-wrz.cpp}
+			\subsection{SPFA判负环-wrz}
+				\lstinputlisting{graph-theory/SPFA-check-negtive-cycle-wrz.cpp}
 			\subsection{k短路a星-gwx}
 				\lstinputlisting{graph-theory/kth-shortest-path-astar-gwx.cpp}
 			\subsection{K短路可并堆}
 				\lstinputlisting{graph-theory/kth-shortest-path-mergeable-heap.cpp}
-			\subsection{最大团}
-				\lstinputlisting{graph-theory/maximum-clique.cpp}
-			\subsection{SPFA判负环-wrz}
-				\lstinputlisting{graph-theory/SPFA-check-negtive-cycle-wrz.cpp}
-			\subsection{斯坦纳树}
-				\lstinputlisting{graph-theory/SteinerTree.cpp}
-			\subsection{stoer-wagner无向图最小割树}
-				\lstinputlisting{graph-theory/stoer-wagner-algorithm.cpp}
-			\subsection{tarjan-gwx}
-				\lstinputlisting{graph-theory/tarjan-gwx.cpp}
-			\subsection{朱刘算法-gwx}
-				\lstinputlisting{graph-theory/zhu-liu-algorithm-gwx.cpp}
+			\subsection{上下界网络流}
+				\input{graph-theory/flow.tex}
 			\subsection{zkw费用流}
 				\lstinputlisting{graph-theory/zkw-cost-flow-gwx.cpp}
-		\section{数论}
-			\subsection{杜教筛}
-				\lstinputlisting{number-theory/dujiaoshai-sum-of-Mobius-function.cpp}
-			\subsection{直线下整点}
-				\lstinputlisting{number-theory/integer-lattice-under-segment.cpp}
-			\subsection{拉格朗日插值}
-				\lstinputlisting{number-theory/Lagrange-polynomials-O(n)-O(nlogn)-wrz.cpp}
-			\subsection{线性回归}
-				\lstinputlisting{number-theory/linear-recurrence.cpp}
-			\subsection{素数测试-gwx}
-				\lstinputlisting{number-theory/pollard-rho-and-primality-test-gwx.cpp}
-			\subsection{原根-gwx}
-				\lstinputlisting{number-theory/primitive-root-gwx.cpp}
-			\subsection{勾股数}
-				\lstinputlisting{number-theory/Pythagorean-triple.txt}
-			\subsection{Pell方程}
-				\input{number-theory/pell-equation.tex}
-			\subsection{平方剩余}
-				\input{number-theory/quadric-residue.tex}
+			\subsection{stoer-wagner无向图最小割树}
+				\lstinputlisting{graph-theory/stoer-wagner-algorithm.cpp}
+			\subsection{朱刘算法-gwx}
+				\lstinputlisting{graph-theory/zhu-liu-algorithm-gwx.cpp}
+			\subsection{树哈希}
+				\input{graph-theory/tree-hash.tex}
+			\subsection{矩阵树定理}
+				\input{graph-theory/matrix-tree.tex}
+			\subsection{带花树}
+				\lstinputlisting{graph-theory/blossom-algorithm.cpp}
+			\subsection{支配树-gwx}
+				\lstinputlisting{graph-theory/dominator_tree-gwx.cpp}
+			\subsection{斯坦纳树}
+				\lstinputlisting{graph-theory/SteinerTree.cpp}
+			\subsection{弦图}
+				\input{graph-theory/chordal-graph.tex}
+		\section{数学}
 			\subsection{博弈论}
-				\input{number-theory/game-theory.tex}
+				\input{mathematics/game-theory.tex}
+			\subsection{杜教筛}
+				\lstinputlisting{mathematics/dujiaoshai-sum-of-Mobius-function.cpp}
+			\subsection{直线下整点}
+				\input{mathematics/integer-lattice-under-segment.tex}
+			\subsection{拉格朗日插值}
+				\lstinputlisting{mathematics/Lagrange-polynomials-O(n)-O(nlogn)-wrz.cpp}
+			\subsection{FFT-wrz}
+				\lstinputlisting{mathematics/FFT-wrz.cpp}
+			\subsection{NTT-gwx}
+				\lstinputlisting{mathematics/NTT-gwx.cpp}
+			\subsection{FWT}
+				\lstinputlisting{mathematics/FWT.cpp}
+			\subsection{高精度-wrz}
+				\lstinputlisting{mathematics/high-precision-wrz.cpp}
+			\subsection{线性基-gwx}
+				\lstinputlisting{mathematics/linear_basement-gwx.cpp}
+			\subsection{线性递推}
+				\lstinputlisting{mathematics/linear-recurrence.cpp}
+			\subsection{单纯形}
+				\lstinputlisting{mathematics/simplex.cpp}
+			\subsection{素数测试-gwx}
+				\lstinputlisting{mathematics/pollard-rho-and-primality-test-gwx.cpp}
+			\subsection{原根-gwx}
+				\lstinputlisting{mathematics/primitive-root-gwx.cpp}
+			\subsection{勾股数}
+				\input{mathematics/Pythagorean-triple.tex}
+			\subsection{Pell方程}
+				\input{mathematics/pell-equation.tex}
+			\subsection{平方剩余}
+				\input{mathematics/quadric-residue.tex}
 		\section{字符串}
 			\subsection{AC自动机-wrz}
 				\lstinputlisting{string/AC-automaton-wrz.cpp}
 			\subsection{扩展KMP-gwx}
 				\lstinputlisting{string/exkmp-gwx.cpp}
-			\subsection{马拉车-gwx}
+			\subsection{Manacher-gwx}
 				\lstinputlisting{string/manacher-gwx.cpp}
 			\subsection{最小表示-gwx}
 				\lstinputlisting{string/minimal-representation-gwx.cpp}
@@ -193,7 +193,7 @@
 				\lstinputlisting{string/suffix-array-SAIS.cpp}
 			\subsection{后缀自动机-wrz}
 				\lstinputlisting{string/suffix-automaton-wrz.cpp}
-			\subsection{ex后缀自动机-wrz}
+			\subsection{扩展后缀自动机-wrz}
 				\lstinputlisting{string/ex-suffix-automaton-wrz.cpp}
 		\section{其他}
 			\subsection{蔡勒公式}
@@ -206,7 +206,6 @@
 				\lstinputlisting{others/mersenne-twister.cpp}
 			\subsection{大数乘法取模}
 				\lstinputlisting{others/O1-multiply-mod.cpp}
-			
 		\section{提示}
 			\subsection{make支持c++11}
 				\lstinputlisting{hints/c++11.txt}
