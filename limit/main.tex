@@ -83,10 +83,33 @@
 				\lstinputlisting{computational-geometry/2d/convex.cpp}
 			\subsection{三角形内心，外心，垂心}
 				\lstinputlisting{computational-geometry/2d/triangle.cpp}
+			\subsection{费马点}
+				\input{computational-geometry/2d/fermat-point.tex}
+			\subsection{多边形和圆的交}
+				\lstinputlisting{computational-geometry/2d/多边形和圆的交.cpp}
+			\subsection{点到凸包切线}
+				\lstinputlisting{computational-geometry/2d/点到凸包切线.cpp}
+			\subsection{闵可夫斯基和}
+				\lstinputlisting{computational-geometry/2d/闵可夫斯基和.cpp}
+			\subsection{最近点对}
+				\lstinputlisting{computational-geometry/2d/最近点对.cpp}
+			\subsection{最小覆盖圆}
+				\lstinputlisting{computational-geometry/2d/最小覆盖圆.cpp}
+			\subsection{最小覆盖球}
+				\lstinputlisting{computational-geometry/2d/最小覆盖球.cpp}
+			\subsection{阿波罗尼茨圆}
+				\input{computational-geometry/2d/阿波罗尼茨圆.tex}
+			\subsection{圆幂}
+				\input{computational-geometry/2d/圆幂.tex}
+			\subsection{球面}
+				\input{computational-geometry/2d/球面.tex}
+			\subsection{公式}
+				\input{computational-geometry/2d/Formula(Saga).tex}
 			\subsection{三维计算几何}
 				\lstinputlisting{computational-geometry/3d/basis.cpp}
 			\subsection{三维凸包}
 				\lstinputlisting{computational-geometry/3d/convex.cpp}
+
 		\section{数据结构}
 			\subsection{KD树-wrz}
 				\lstinputlisting{data-structure/kd-tree-3d-wrz.cpp}
@@ -142,10 +165,12 @@
 			\subsection{斯坦纳树}
 				\lstinputlisting{graph-theory/SteinerTree.cpp}
 			\subsection{弦图}
-				\input{graph-theory/chordal-graph.tex}
+				\lstinputlisting{graph-theory/chordal-graph.cpp}
+			% \subsection{图论知识}
+				% \input{graph-theory/图论知识.tex} 
 		\section{数学}
-			\subsection{博弈论}
-				\input{mathematics/game-theory.tex}
+			% \subsection{博弈论}
+				% \input{mathematics/game-theory.tex}
 			\subsection{杜教筛}
 				\lstinputlisting{mathematics/dujiaoshai-sum-of-Mobius-function.cpp}
 			\subsection{直线下整点}
@@ -176,6 +201,10 @@
 				\input{mathematics/pell-equation.tex}
 			\subsection{平方剩余}
 				\input{mathematics/quadric-residue.tex}
+			\subsection{多点求值与快速插值}
+				\input{mathematics/多点求值与快速插值.tex}
+			\subsection{多项式牛顿法}
+				\input{mathematics/多项式牛顿法.tex}
 		\section{字符串}
 			\subsection{AC自动机-wrz}
 				\lstinputlisting{string/AC-automaton-wrz.cpp}
@@ -195,6 +224,8 @@
 				\lstinputlisting{string/suffix-automaton-wrz.cpp}
 			\subsection{扩展后缀自动机-wrz}
 				\lstinputlisting{string/ex-suffix-automaton-wrz.cpp}
+			\subsection{结论}
+				\input{string/Conclusions.tex}
 		\section{其他}
 			\subsection{蔡勒公式}
 				\lstinputlisting{others/zellers-congruence.cpp}
@@ -207,6 +238,8 @@
 			\subsection{大数乘法取模}
 				\lstinputlisting{others/O1-multiply-mod.cpp}
 		\section{提示}
+			\subsection{Vimrc}
+				\lstinputlisting[language=]{hints/vimrc}
 			\subsection{make支持c++11}
 				\lstinputlisting{hints/c++11.txt}
 			\subsection{Java}
@@ -222,8 +255,10 @@
 			\subsection{手开栈}
 				\input{hints/stack-hack.tex}
 		\section{附录-数学公式}
-			\input{appendix-formula/table-of-formulae.tex}
-			\input{appendix-formula/table-of-range.tex}
+			\subsection{}
+				\input{appendix-formula/Formula.tex}
+				\input{appendix-formula/table-of-formulae.tex}
+				% \input{appendix-formula/table-of-range.tex}
 		\end{spacing}
 		\endgroup
 	\end{multicols}
