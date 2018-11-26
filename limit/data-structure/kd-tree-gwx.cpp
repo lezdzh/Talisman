@@ -24,7 +24,6 @@ struct rev
 };
 typedef pr priority_queue <rev>;
 pr p0;
-
 int build(int l, int r, int f)
 {
 	if(l > r)

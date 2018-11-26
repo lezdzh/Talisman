@@ -1,13 +1,8 @@
 struct sam
 {
-	sam *fail, *next[A];
-	int len;
+	sam *fail, *next[A]; int len;
 }mem[N<<1], *tot, *null, *root;
-sam* newsam()
-{
-	*++tot = *null;
-	return tot;
-}
+sam* newsam(){*++tot = *null;return tot;}
 void init()
 {
 	null = tot = mem; null->fail = null; null->len = 0;
@@ -47,8 +42,4 @@ sam* extend(sam *p, int v)
 		return np;
 	}
 }
-void build_tree()
-{
-	for(sam *i = tot; i != mem; i--)
-		addedge(i->fail - mem, i - mem);
-}
+void build_tree(){for(sam *i = tot; i != mem; i--) addedge(i->fail - mem, i - mem);}

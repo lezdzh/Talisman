@@ -1,15 +1,6 @@
-#include<cstdio>
 #define N 100005
 #define M 200005
-using namespace std;
-int last[N], ecnt = 1, cnt, ans[M], in_deg[N], out_deg[N];
-bool vis[M];
-struct edge{int next,to;}e[M<<1];
-void addedge(int a, int b)
-{
-    e[++ecnt] = (edge){last[a], b};
-    last[a] = ecnt;
-}
+int cnt, ans[M], in_deg[N], out_deg[N];bool vis[M];
 void dfs(int x)
 {
     for(int &i = last[x]; i; i = e[i].next)
@@ -19,10 +10,7 @@ void dfs(int x)
         {
             vis[j>>1] = 1;
             dfs(y);
-            ans[++cnt] = j;
-        } 
-    }
-}
+            ans[++cnt] = j; }}} 
 int main()
 {
     int t, n, m, a, b;
@@ -48,16 +36,11 @@ int main()
                 return !printf("NO\n");
     }   
     dfs(a);
-    if(cnt != m)
-    {
-        puts("NO"); 
-    } 
+    if(cnt != m) puts("NO"); 
     else
     {
         puts("YES");
         for(int i = cnt; i; i--)
-        {
             printf("%d ",ans[i]&1?-(ans[i]>>1):(ans[i]>>1));
-        }
     }
 }

@@ -1,7 +1,6 @@
 Point inCenter(const Point &A, const Point &B, const Point &C) { // 内心
 	double a = (B - C).len(), b = (C - A).len(), c = (A - B).len(),
-		s = fabs(det(B - A, C - A)),
-		r = s / p;
+		s = fabs(det(B - A, C - A)), r = s / p;
 	return (A * a + B * b + C * c) / (a + b + c);
 }
 Point circumCenter(const Point &a, const Point &b, const Point &c) { // 外心

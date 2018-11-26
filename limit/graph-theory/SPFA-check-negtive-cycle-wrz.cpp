@@ -1,3 +1,6 @@
+/*	建好原图然后调用SPFA()，若返回为true表示无负环，false表示有负环
+	多次调用时记得清空inqt等数组
+	有负环时理论复杂度是O(n^2)的 */
 int inq[N], inqt[N], dis[N];
 bool SPFA()
 {
@@ -16,18 +19,6 @@ bool SPFA()
 				{
 					if(++inqt[y] > n) return false; // 入队n次即有负环
 					inq[y] = 1;
-					q.push(y);
-				}
-			}
-		}
-	}
+					q.push(y);}}}}
 	return true;
 }
-/*
-	步骤：
-	1.建好原图
-	2.SPFA() // 若返回为true表示无负环，false表示有负环
-	
-	多次调用时记得清空inqt等数组
-	有负环时理论复杂度是O(n^2)的
-*/

@@ -1,13 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-const double inf = 1e9;
-const double eps = 1e-9;
-const double pi = acos(-1.0);
-bool le(double x, double y){return x < y - eps;} // x严格小于y
-bool leq(double x, double y){return x < y + eps;} // x小于等于y
-bool equ(double x, double y){return fabs(x - y) < eps;} // x等于y
-double mysqrt(double x) {return x < eps ? 0 : sqrt(x);} // 开根号
-double sqr(double x) {return x * x;} // 平方
 struct point // 点或向量
 {
 	double x, y;
@@ -15,8 +5,6 @@ struct point // 点或向量
 	double operator ^ (point that){return x*that.y - y*that.x;}
 	point operator * (double t){return (point){x*t, y*t};}
 	point operator / (double t){return (point){x/t, y/t};}
-	point operator + (point that) {return (point){x + that.x, y + that.y};}
-	point operator - (point that) {return (point){x - that.x, y - that.y};}
 	double len(){return mysqrt(x*x+y*y);} // 到原点距离/向量长度
 	point reset_len(double t) // 改变向量长度为t，t为正则方向不变，t为负则方向相反
 	{double p = len();return (point){x*t/p, y*t/p};}
@@ -97,8 +85,7 @@ bool HP(int lcnt, line *l, line *h, point *p)
 	return tail - head > 1;
 }
 double calc(double X){return 0;} // 计算给定X坐标上的覆盖的长度，配合辛普森积分使用
-// 自适应辛普森积分，参数分别为(左端点x坐标，中点x坐标，右端点x坐标，左端点答案，中点答案，右端点答案)
-// 改变计算深度应调整eps
+// 自适应辛普森积分，参数分别为(左端点x坐标，中点x坐标，右端点x坐标，左端点答案，中点答案，右端点答案)，改变计算深度应调整eps
 double simpson(double l, double mid, double r, double fl, double fm, double fr) 
 {
 	double lmid = (l+mid)/2, rmid = (r+mid)/2, flm = calc(lmid), frm = calc(rmid);
@@ -106,4 +93,3 @@ double simpson(double l, double mid, double r, double fl, double fm, double fr)
 	if(fabs(ansl + ansr - ans) < eps) return ans / 6;
 	else return simpson(l,lmid,mid,fl,flm,fm) + simpson(mid,rmid,r,fm,frm,fr);
 }
-int main(){}

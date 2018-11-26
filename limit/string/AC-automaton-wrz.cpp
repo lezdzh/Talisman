@@ -1,13 +1,8 @@
-struct ACAM
-{
+struct ACAM{
     ACAM *next[S], *fail;
     int ban;
 }mem[N], *tot, *null, *root, *q[N];
-ACAM *newACAM()
-{
-    ACAM *p = ++tot;
-    *p = *null; return p;
-}
+ACAM *newACAM(){ACAM *p = ++tot;*p = *null; return p;}
 void init()
 {
     null = tot = mem;

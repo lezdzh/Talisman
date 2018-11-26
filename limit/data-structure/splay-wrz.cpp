@@ -37,12 +37,7 @@ void pushdown(node *x)
         tag = 0;
     }
 }
-void update(node *x)
-{
-    if(x==null) return;
-    update(x->fa);
-    pushdown(x);
-}
+void update(node *x){if(x==null) return;update(x->fa);pushdown(x);}
 void splay(node *x, node *top)
 {
     update(x);

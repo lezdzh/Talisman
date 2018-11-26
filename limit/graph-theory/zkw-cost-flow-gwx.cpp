@@ -1,14 +1,8 @@
 //稠密图、二分图中较快，稀疏图中不如SPFA
 int flow, cost, price;
-
 int dfs(int u, int f)
 {
-	if(u == t)
-	{
-		flow += f;
-		cost += price * f;
-		return f;
-	}
+	if(u == t){ flow += f; cost += price * f; return f;}
 	vst[u] = 1;
 	int used = 0;
 	for(int i = tail[u]; i; i = e[i].next)

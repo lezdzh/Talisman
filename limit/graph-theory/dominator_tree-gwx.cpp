@@ -1,8 +1,6 @@
-/*
-    用ins()加边
+/*  用ins()加边
     build前设置n为点数，s为源点
-    树中的i号点对应原图的id[i]号点
-*/
+    树中的i号点对应原图的id[i]号点*/
 struct Dominator_Tree {
     int n, s, cnt;
     int dfn[N], id[N], pa[N], semi[N], idom[N], p[N], mn[N];

@@ -1,7 +1,5 @@
-#include<bits/stdc++.h>
 #define BASE 10000
 #define L 20005
-using namespace std;
 int p; char s[10*L];
 struct bigint
 {
@@ -141,4 +139,3 @@ struct bigint
 		printf("\n");
 	}
 };
-int main(){}

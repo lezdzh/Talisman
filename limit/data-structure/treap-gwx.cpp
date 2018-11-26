@@ -8,9 +8,7 @@ struct node
 		return x < val ? 0 : 1;
 	}
 } a[maxn];
-void maintain(int u)  {
-	a[u].s = a[u].c + a[a[u].ch[0]].s + a[a[u].ch[1]].s;
-}
+void maintain(int u){a[u].s = a[u].c + a[a[u].ch[0]].s + a[a[u].ch[1]].s;}
 void rotate(int &u, int d)
 {
 	int tmp = a[u].ch[d ^ 1];

@@ -37,11 +37,7 @@ void reorder() {
 			std::swap(p[i], p[2]);
 			for (int j = 3; j < n; ++ j)
 				if (sign(volume(p[0], p[1], p[2], p[j]))) {
-					std::swap(p[j], p[3]); return;
-				}
-		}
-	}
-}
+					std::swap(p[j], p[3]); return; }}}}
 void build_convex() {
 	reorder(); clear(face);
 	face.emplace_back(0, 1, 2);

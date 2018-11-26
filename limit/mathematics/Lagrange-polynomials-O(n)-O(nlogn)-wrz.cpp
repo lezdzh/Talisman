@@ -14,12 +14,9 @@ int fpow(int a, int b)
 int la(int x, int k) // k次，求f(x)
 {
 	int lim = k+2, ff = 1; 
-	for(int i = 1; i <= lim; i++) 
-		ff = 1ll * ff * (x-i) % MOD;
-	for(int i = 1; i <= lim; i++)
-		f[i] = (f[i-1] + fpow(i, k)) % MOD; // 预处理 f(1),f(2),...,f(lim)，注意修改
-	if(x <= lim) return f[x];
-	int ret = 0;
+	for(int i = 1; i <= lim; i++) ff = 1ll * ff * (x-i) % MOD;
+	for(int i = 1; i <= lim; i++) f[i] = (f[i-1] + fpow(i, k)) % MOD; // 预处理 f(1),f(2),...,f(lim)，注意修改
+	if(x <= lim) return f[x]; int ret = 0;
 	for(int i = 1; i <= lim; i++)
 	{
 		(ret += 1ll * f[i] 
@@ -31,8 +28,6 @@ int la(int x, int k) // k次，求f(x)
 }
 void init()
 {
-	inv[1] = 1;
-	for(int i = 2; i < N; i++) inv[i] = 1ll * (MOD - MOD / i) * inv[MOD % i] % MOD;
-	invf[0] = 1; 
-	for(int i = 1; i < N; i++) invf[i] = 1ll * invf[i-1] * inv[i] % MOD;
+	inv[1] = 1;	for(int i = 2; i < N; i++) inv[i] = 1ll * (MOD - MOD / i) * inv[MOD % i] % MOD;
+	invf[0] = 1; for(int i = 1; i < N; i++) invf[i] = 1ll * invf[i-1] * inv[i] % MOD;
 }

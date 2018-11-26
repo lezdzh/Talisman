@@ -2,12 +2,7 @@
 int N, m;
 int pre[maxn], in[maxn], f[maxn], id[maxn];
 struct node {int u, v, w;} a[maxm * 2]; //边表
-
-int find(int x)
-{
-	return f[x] == x ? x : f[x] = find(f[x]);
-}
-
+int find(int x){return f[x] == x ? x : f[x] = find(f[x]);}
 int mst()
 {
 	long long res = 0;

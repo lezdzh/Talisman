@@ -1,14 +1,5 @@
-struct heap 
-{ 
-	heap *ch[2]; 
-	int dis, siz, v; 
-}mem[N*2], *h[N], *null, *tot; 
-heap* newheap()
-{
-	heap *p = ++tot; 
-	*p = *null; 
-	return p;
-} 
+struct heap {heap *ch[2]; int dis, siz, v; }mem[N*2], *h[N], *null, *tot; 
+heap* newheap(){ heap *p = ++tot; *p = *null; return p;} 
 void init() 
 { 
 	null = tot = mem; 

@@ -1,14 +1,9 @@
 char s[N], out[N];
 struct PT
 {
-    PT *fail, *next[A];
-    int len;
+    PT *fail, *next[A]; int len;
 }mem[N], *tot, *null, *root1, *root0, *last;
-PT *newPT()
-{
-    PT *p = ++tot;
-    *p = *null; return p;
-}
+PT *newPT(){PT *p = ++tot; *p = *null; return p;}
 void init()
 {
     null = tot = mem;
@@ -25,11 +20,8 @@ int extend(int c, int i) // 返回这一次是否多了一个回文子串
     if(p->next[c] != null) {last = p->next[c]; return 0;}
     PT *np = p->next[c] = last = newPT(); np->len = p->len + 2;
     if(p->len == -1) np->fail = root0;
-    else 
-    {
-        for(p=p->fail; s[i-p->len-1] != c+'a'; p = p->fail);
-        np->fail = p->next[c];
-    }
+    else { for(p=p->fail; s[i-p->len-1] != c+'a'; p = p->fail);
+        np->fail = p->next[c]; }
     return 1;
 }
 void main()

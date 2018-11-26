@@ -3,10 +3,8 @@ import java.math.*;
 public class javaNote
 {
 	static BigInteger q[] = new BigInteger[5000000]; // 定义数组的正确姿势，记得分配内存
-
 	public static void main(String[] args) 
 	{
-
 		long currentTime = System.currentTimeMillis(); // 获取时间，单位是ms
 
 		Scanner sc = new Scanner(System.in); // 定义输入
@@ -35,7 +33,6 @@ public class javaNote
 			RoundingMode.HALF_DOWN:下取整的四舍五入，>0.5会进位，<=0.5会舍去，负数原理同上
 			RoundingMode.HALF_EVEN:分奇偶的四舍五入，>0.5会进位，<0.5会舍去，=0.5会向最近的偶数取整，如2.5->2，(-2.5)->(-2)
 		*/
-
 		Math.max(a, b);//取大
 		Math.min(a, b);//取小
 		Math.PI;//pi
