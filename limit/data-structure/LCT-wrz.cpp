@@ -57,27 +57,15 @@ void splay(node *x)
 void access(node *x)
 {
     node *tmp = null;
-    for(; x != null; )
-    {
-        splay(x);
-        x->ch[1] = tmp;
-        pushup(x);
-        tmp = x;
-        x = x->fa;
-    }
+    for(; x != null; ){splay(x); x->ch[1] = tmp;pushup(x);tmp = x;x = x->fa;}
 }
 void makeroot(node *x)
 {
-    access(x);
-    splay(x);
-    x->rev ^= 1;
+    access(x); splay(x); x->rev ^= 1;
     swap(x->ch[0], x->ch[1]);
 }
 void link(node *x, node *y)
-{
-    makeroot(x);
-    x->fa = y;
-}
+{makeroot(x); x->fa = y;}
 void cut(node *x, node *y)
 {
     makeroot(x); access(y);

@@ -5,26 +5,11 @@ struct point
 	int d[3];
 	bool operator < (const point &that) const {return d[D] < that.d[D];}
 }p[N];
-struct node
-{
-	int d[2][3]; // 0 min 1 max
-}t[N<<2];
-void pushup(int x)
-{
-	for(int i = 0; i < 3; i++)
-	{
-		t[x].d[0][i] = min(t[x<<1].d[0][i], t[x<<1|1].d[0][i]);
-		t[x].d[1][i] = max(t[x<<1].d[1][i], t[x<<1|1].d[1][i]);
-	}
-}
+struct node{int d[2][3];}t[N<<2]; // 0 min 1 max
+void pushup(int x){for(int i = 0; i < 3; i++){	t[x].d[0][i] = min(t[x<<1].d[0][i], t[x<<1|1].d[0][i]);t[x].d[1][i] = max(t[x<<1].d[1][i], t[x<<1|1].d[1][i]);}}
 void build(int x, int l, int r, int d)
 {
-	if(l == r) 
-	{
-		for(int i = 0; i < 3; i++)
-			t[x].d[0][i] = t[x].d[1][i] = p[l].d[i];
-		return;
-	}
+	if(l == r) {for(int i = 0; i < 3; i++)t[x].d[0][i] = t[x].d[1][i] = p[l].d[i];return;}
 	D = d; int mid = (l+r) >> 1;
 	nth_element(p+l, p+mid, p+r+1);
 	(++d) %= 3;
