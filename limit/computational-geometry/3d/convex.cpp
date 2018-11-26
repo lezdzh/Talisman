@@ -1,17 +1,17 @@
-__inline P cross(const P& a, const P& b) { return P(a.y * b.z - a.z * b.y,	a.z * b.x - a.x * b.z,	a.x * b.y - a.y * b.x);}
-__inline DB mix(const P& a, const P& b, const P& c) { return dot(cross(a, b), c);}
-__inline DB volume(const P& a, const P& b, const P& c, const P& d) { return mix(b - a, c - a, d - a);}
+P cross(const P& a, const P& b) { return P(a.y * b.z - a.z * b.y,	a.z * b.x - a.x * b.z,	a.x * b.y - a.y * b.x);}
+DB mix(const P& a, const P& b, const P& c) { return dot(cross(a, b), c);}
+DB volume(const P& a, const P& b, const P& c, const P& d) { return mix(b - a, c - a, d - a);}
 struct Face {
 	int a, b, c;
-	__inline Face() {}
-	__inline Face(int _a, int _b, int _c):a(_a), b(_b), c(_c) {}
-	__inline DB area() const { return 0.5 * cross(p[b] - p[a], p[c] - p[a]).len();}
-	__inline P normal() const {	return cross(p[b] - p[a], p[c] - p[a]).unit();}
-	__inline DB dis(const P& p0) const {return dot(normal(), p0 - p[a]);}
+	Face() {}
+	Face(int _a, int _b, int _c):a(_a), b(_b), c(_c) {}
+	DB area() const { return 0.5 * cross(p[b] - p[a], p[c] - p[a]).len();}
+	P normal() const {	return cross(p[b] - p[a], p[c] - p[a]).unit();}
+	DB dis(const P& p0) const {return dot(normal(), p0 - p[a]);}
 };
 std::vector<Face> face, tmp;  // Should be O(n).
 int mark[N][N], Time, n;
-__inline void add(int v) {
+void add(int v) {
 	++ Time;
 	clear(tmp);
 	for (int i = 0; i < (int)face.size(); ++ i) {
